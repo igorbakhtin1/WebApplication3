@@ -5,25 +5,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Главная страница</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Добавить новый фильм</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.title)
+                @*@Html.DisplayNameFor(model => model.title)*@
+                Название
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @*@Html.DisplayNameFor(model => model.ReleaseDate)*@
+                Дата выхода
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @*@Html.DisplayNameFor(model => model.Genre)*@
+                Жанр
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @*@Html.DisplayNameFor(model => model.Price)*@
+                Цена
             </th>
             <th></th>
         </tr>
@@ -44,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Детали</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Удалить</a>
             </td>
         </tr>
 }
